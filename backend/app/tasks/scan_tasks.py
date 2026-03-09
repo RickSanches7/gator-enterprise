@@ -11,10 +11,10 @@ from datetime import datetime, timezone
 from celery import shared_task
 from sqlalchemy.orm import Session
 
-from app.core.database import SessionLocal
-from app.models.scan   import Scan, ScanStatus
-from app.models.event  import ScanEvent
-from app.models.finding import Finding
+from app.core.database import AsyncSessionLocal as SessionLocal
+from app.models.models import Scan, ScanStatus
+from app.models.models import ScanEvent
+from app.models.models import Finding
 
 from app.modules.recon.engine      import ReconEngine
 from app.modules.portscan.engine   import PortScanEngine
@@ -25,7 +25,7 @@ from app.modules.auth_test.engine  import AuthTestEngine
 from app.modules.ssl_test.engine   import SSLTestEngine
 from app.modules.bizlogic.engine   import BizLogicEngine
 from app.modules.ad_test.engine    import ADTestEngine
-from app.modules.pci_swift.engine  import PCISWIFTEngine
+from app.modules.pci_swift.engine import PCISwiftEngine
 from app.modules.network.engine    import NetworkEngine
 from app.tasks.report_generator    import ReportGenerator
 from app.tasks.telegram_bot        import get_bot
@@ -161,7 +161,7 @@ def run_full_scan(self, scan_id: str):
         if scan_type in ("full","compliance"):
             prog(84,"Module: PCI DSS + SWIFT CSCF")
             try:
-                pci=PCISWIFTEngine(target,scan_id,db,push_event,scan_results=all_results)
+                pci=PCISwiftEngine(target,scan_id,db,push_event,scan_results=all_results)
                 pci_data=pci.run()
                 all_results["pci_results"]=pci_data.get("pci_results",{})
                 all_results["swift_results"]=pci_data.get("swift_results",{})

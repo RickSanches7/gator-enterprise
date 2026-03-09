@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>GATOR PRO Enterprise</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap');
+:root{--bg:#0a0e1a;--bg2:#0f1626;--bg3:#141d30;--border:#1e2d4a;--accent:#00d4ff;--accent2:#ff3d6b;--accent3:#00ff9d;--text:#c8d8f0;--text2:#6a85b0;--critical:#ff3d6b;--high:#ff7c35;--medium:#ffc107;--low:#00ff9d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Rajdhani',sans-serif;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,212,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:220px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100}
+.logo{padding:24px 20px;border-bottom:1px solid var(--border)}
+.logo-title{font-size:20px;font-weight:700;color:var(--accent);letter-spacing:2px;font-family:'Share Tech Mono',monospace}
+.logo-sub{font-size:10px;color:var(--text2);letter-spacing:3px;margin-top:2px}
+.nav{flex:1;padding:12px 0}
+.nav-item{display:flex;align-items:center;gap:12px;padding:11px 20px;cursor:pointer;color:var(--text2);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .2s;border-left:3px solid transparent}
+.nav-item:hover{color:var(--text);background:rgba(0,212,255,.05)}
+.nav-item.active{color:var(--accent);background:rgba(0,212,255,.08);border-left-color:var(--accent)}
+.sidebar-footer{padding:16px 20px;border-top:1px solid var(--border);font-size:11px;color:var(--text2)}
+.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent3);margin-right:6px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.main{margin-left:220px;padding:24px;min-height:100vh;position:relative;z-index:1}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.page-title{font-size:22px;font-weight:700;letter-spacing:2px}.page-title span{color:var(--accent)}
+.user-badge{display:flex;align-items:center;gap:10px;background:var(--bg3);border:1px solid var(--border);padding:8px 14px;border-radius:6px;font-size:13px;font-weight:600}
+.avatar{width:28px;height:28px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
+.page{display:none}.page.active{display:block}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:20px;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--card-color,var(--accent))}
+.stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:10px}
+.stat-value{font-size:36px;font-weight:700;font-family:'Share Tech Mono',monospace;color:var(--card-color,var(--accent));line-height:1}
+.stat-sub{font-size:11px;color:var(--text2);margin-top:6px}
+.panel{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:24px;margin-bottom:24px}
+.panel-title{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.panel-title::before{content:'';display:block;width:3px;height:16px;background:var(--accent);border-radius:2px}
+.form-row{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.form-group{flex:1;min-width:180px}
+.form-group label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:8px}
+.form-group input,.form-group select{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 14px;color:var(--text);font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:600;outline:none;transition:border-color .2s}
+.form-group input:focus,.form-group select:focus{border-color:var(--accent)}
+.modules-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
+.mod{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:10px 8px;cursor:pointer;text-align:center;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text2);transition:all .2s;user-select:none}
+.mod.on{border-color:var(--accent);color:var(--accent);background:rgba(0,212,255,.08)}
+.mod-icon{font-size:18px;display:block;margin-bottom:4px}
+.btn{padding:12px 28px;border-radius:6px;border:none;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.btn-primary{background:var(--accent);color:#0a0e1a;box-shadow:0 0 20px rgba(0,212,255,.3)}
+.btn-primary:hover{background:#00eaff;transform:translateY(-1px)}
+.btn-primary:disabled{background:var(--border);color:var(--text2);box-shadow:none;cursor:not-allowed;transform:none}
+.btn-danger{background:var(--accent2);color:#fff}
+.btn-sm{padding:7px 16px;font-size:12px}
+.progress-wrap{background:var(--bg3);border-radius:4px;height:6px;margin:12px 0;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:4px;transition:width .5s ease}
+.pct{font-family:'Share Tech Mono',monospace;font-size:24px;color:var(--accent)}
+.log-stream{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:14px;height:180px;overflow-y:auto;font-family:'Share Tech Mono',monospace;font-size:11px;line-height:1.7}
+.log-ok{color:var(--accent3)}.log-warn{color:var(--high)}.log-error{color:var(--critical)}.log-info{color:var(--accent)}.log-data{color:var(--text2)}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--bg3)}
+th{padding:12px 16px;text-align:left;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text2);border-bottom:1px solid var(--border)}
+td{padding:13px 16px;font-size:13px;font-weight:600;border-bottom:1px solid rgba(30,45,74,.5);vertical-align:top}
+tr:hover td{background:rgba(0,212,255,.02)}
+.badge{display:inline-block;padding:3px 10px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-family:'Share Tech Mono',monospace}
+.sev-critical{background:rgba(255,61,107,.15);color:var(--critical);border:1px solid rgba(255,61,107,.3)}
+.sev-high{background:rgba(255,124,53,.15);color:var(--high);border:1px solid rgba(255,124,53,.3)}
+.sev-medium{background:rgba(255,193,7,.15);color:var(--medium);border:1px solid rgba(255,193,7,.3)}
+.sev-low{background:rgba(0,255,157,.15);color:var(--low);border:1px solid rgba(0,255,157,.3)}
+.comp-row{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;border-bottom:1px solid rgba(30,45,74,.4);font-size:12px}
+.comp-row:last-child{border-bottom:none}
+.comp-req{color:var(--text2);font-weight:600;min-width:50px}
+.comp-title{color:var(--text);flex:1;padding:0 12px}
+.comp-status{font-size:10px;font-weight:700;letter-spacing:1px;padding:3px 9px;border-radius:3px}
+.status-pass{background:rgba(0,255,157,.15);color:var(--low)}
+.status-fail{background:rgba(255,61,107,.15);color:var(--critical)}
+.status-manual{background:rgba(0,212,255,.1);color:var(--accent)}
+.hist-item{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:18px 20px;display:flex;align-items:center;gap:16px;margin-bottom:10px;cursor:pointer;transition:border-color .2s}
+.hist-item:hover{border-color:var(--accent)}
+.login-page{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:1000}
+.login-box{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:48px;width:380px;box-shadow:0 0 60px rgba(0,212,255,.1)}
+.login-title{text-align:center;margin-bottom:32px}
+.login-title h1{font-size:28px;font-weight:700;font-family:'Share Tech Mono',monospace;color:var(--accent);letter-spacing:4px}
+.login-title p{font-size:11px;color:var(--text2);letter-spacing:3px;margin-top:4px}
+.login-field{margin-bottom:16px}
+.login-field label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text2);margin-bottom:8px}
+.login-field input{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:12px 16px;color:var(--text);font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:600;outline:none;transition:border-color .2s}
+.login-field input:focus{border-color:var(--accent)}
+.btn-login{width:100%;padding:14px;margin-top:8px;background:var(--accent);color:#0a0e1a;border:none;border-radius:6px;font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.btn-login:hover{background:#00eaff}
+.login-err{color:var(--critical);font-size:12px;text-align:center;margin-top:12px;display:none}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:500;display:none;align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:28px;width:680px;max-width:95vw;max-height:80vh;overflow-y:auto}
+.detail-row{display:flex;gap:8px;margin-bottom:10px;font-size:13px}
+.detail-lbl{color:var(--text2);font-weight:600;min-width:100px;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding-top:2px}
+.detail-val{color:var(--text);flex:1;line-height:1.6}
+.code-block{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:12px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--accent3);white-space:pre-wrap;word-break:break-all}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--bg3);border:1px solid var(--accent);border-radius:8px;padding:14px 20px;font-size:13px;font-weight:600;color:var(--accent);z-index:9999;transform:translateY(80px);opacity:0;transition:all .3s}
+.toast.show{transform:translateY(0);opacity:1}
+.empty{text-align:center;padding:60px 20px;color:var(--text2)}
+.empty-icon{font-size:48px;margin-bottom:12px;opacity:.3}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg3)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+</style></head><body>
+<div class="login-page" id="loginPage">
+<div class="login-box">
+<div class="login-title"><h1>GATOR PRO</h1><p>ENTERPRISE v2.0</p></div>
+<div class="login-field"><label>Username</label><input type="text" id="lu" value="admin"></div>
+<div class="login-field"><label>Password</label><input type="password" id="lp" placeholder="password" onkeydown="if(event.key==='Enter')login()"></div>
+<button class="btn-login" onclick="login()">LOGIN</button>
+<div class="login-err" id="lerr">Invalid credentials</div>
+</div></div>
+<div class="sidebar">
+<div class="logo"><div class="logo-title">GATOR PRO</div><div class="logo-sub">ENTERPRISE</div></div>
+<nav class="nav">
+<div class="nav-item active" onclick="nav('dashboard',this)"><span>📊</span>Dashboard</div>
+<div class="nav-item" onclick="nav('scan',this)"><span>🎯</span>New Scan</div>
+<div class="nav-item" onclick="nav('findings',this)"><span>🔍</span>Findings</div>
+<div class="nav-item" onclick="nav('compliance',this)"><span>📋</span>Compliance</div>
+<div class="nav-item" onclick="nav('history',this)"><span>🕐</span>History</div>
+</nav>
+<div class="sidebar-footer"><span class="status-dot"></span>All systems online<div style="margin-top:4px">v2.0.0 · gator.uz</div></div>
+</div>
+<div class="main">
+<div class="topbar">
+<div class="page-title" id="ptitle"><span>DASH</span>BOARD</div>
+<div style="display:flex;gap:12px;align-items:center">
+<div id="apiStatus" style="font-size:12px;color:var(--text2)">...</div>
+<div class="user-badge"><div class="avatar" id="avi">A</div><span id="uname">admin</span><span style="cursor:pointer;color:var(--text2);margin-left:8px" onclick="logout()">⏻</span></div>
+</div></div>
+<div class="page active" id="page-dashboard">
+<div class="stats-grid">
+<div class="stat-card" style="--card-color:var(--critical)"><div class="stat-label">Critical</div><div class="stat-value" id="s-critical">0</div><div class="stat-sub">findings</div></div>
+<div class="stat-card" style="--card-color:var(--high)"><div class="stat-label">High</div><div class="stat-value" id="s-high">0</div><div class="stat-sub">findings</div></div>
+<div class="stat-card" style="--card-color:var(--medium)"><div class="stat-label">Medium</div><div class="stat-value" id="s-medium">0</div><div class="stat-sub">findings</div></div>
+<div class="stat-card"><div class="stat-label">Total Scans</div><div class="stat-value" id="s-scans">0</div><div class="stat-sub">completed</div></div>
+</div>
+<div class="panel"><div class="panel-title">Quick Scan</div>
+<div class="form-row">
+<div class="form-group" style="flex:2"><label>Target URL / IP</label><input type="text" id="qt" placeholder="https://bank.example.com"></div>
+<div class="form-group"><label>Type</label><select id="qtype"><option value="full">Full Pentest</option><option value="web">Web</option><option value="api">API</option><option value="ssl">SSL/TLS</option></select></div>
+<div class="form-group" style="flex:0;display:flex;align-items:flex-end"><button class="btn btn-primary" onclick="quickScan()">SCAN</button></div>
+</div></div>
+<div id="dash-progress" style="display:none" class="panel">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+<div class="panel-title" style="margin-bottom:0">Scan Running</div><div class="pct" id="dp">0%</div></div>
+<div style="font-size:12px;color:var(--text2);margin-bottom:6px" id="dm">Initializing...</div>
+<div class="progress-wrap"><div class="progress-bar" id="db" style="width:0%"></div></div>
+<div class="log-stream" id="dl"></div>
+</div>
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+<div style="padding:16px 20px;border-bottom:1px solid var(--border)"><div class="panel-title" style="margin-bottom:0">Recent Findings</div></div>
+<div id="dash-findings"><div class="empty"><div class="empty-icon">🎯</div>No scans yet. Start a scan above.</div></div>
+</div></div>
+<div class="page" id="page-scan">
+<div class="panel"><div class="panel-title">Target</div>
+<div class="form-row">
+<div class="form-group" style="flex:2"><label>Target URL / IP</label><input type="text" id="st" placeholder="https://api.bank.example.com"></div>
+<div class="form-group"><label>Profile</label><select id="sp"><option value="full">Full Pentest</option><option value="web">Web App</option><option value="api">API Security</option><option value="infra">Infrastructure</option><option value="compliance">PCI/SWIFT</option></select></div>
+</div>
+<div class="form-row">
+<div class="form-group"><label>Auth Token</label><input type="text" id="sat" placeholder="Bearer ..."></div>
+<div class="form-group"><label>Threads</label><select id="sth"><option value="10">10 Low</option><option value="25" selected>25 Normal</option><option value="50">50 High</option></select></div>
+</div></div>
+<div class="panel"><div class="panel-title">Modules</div>
+<div class="modules-grid" id="mods"></div>
+<div style="display:flex;gap:12px;align-items:center">
+<button class="btn btn-primary" id="startBtn" onclick="startScan()">START SCAN</button>
+<button class="btn btn-sm" style="background:var(--bg3);border:1px solid var(--border);color:var(--text2)" onclick="toggleAll()">Toggle All</button>
+<span style="font-size:12px;color:var(--text2)" id="mc"></span>
+</div></div>
+<div id="scan-progress" style="display:none" class="panel">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+<div class="panel-title" style="margin-bottom:0">Scanning</div><div class="pct" id="sp2">0%</div></div>
+<div style="font-size:12px;color:var(--text2);margin-bottom:6px" id="sm">Initializing...</div>
+<div class="progress-wrap"><div class="progress-bar" id="sb" style="width:0%"></div></div>
+<div class="log-stream" id="sl"></div>
+<div style="margin-top:12px"><button class="btn btn-danger btn-sm" onclick="stopScan()">STOP</button></div>
+</div></div>
+<div class="page" id="page-findings">
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+<div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+<div style="display:flex;gap:8px" id="filters">
+<button onclick="filt('all',this)" style="padding:5px 14px;border-radius:20px;border:1px solid var(--accent);background:transparent;color:var(--accent);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;cursor:pointer">All</button>
+<button onclick="filt('critical',this)" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;cursor:pointer">Critical</button>
+<button onclick="filt('high',this)" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;cursor:pointer">High</button>
+<button onclick="filt('medium',this)" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;cursor:pointer">Medium</button>
+<button onclick="filt('low',this)" style="padding:5px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);font-family:'Rajdhani',sans-serif;font-size:12px;font-weight:700;cursor:pointer">Low</button>
+</div>
+<span style="font-size:12px;color:var(--text2)" id="fc">0 findings</span>
+</div>
+<table><thead><tr><th>Severity</th><th>CVSS</th><th>Title</th><th>Host</th><th>Category</th><th></th></tr></thead>
+<tbody id="ftable"><tr><td colspan="6"><div class="empty"><div class="empty-icon">🔍</div>No findings yet.</div></td></tr></tbody>
+</table></div></div>
+<div class="page" id="page-compliance">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+<div style="padding:14px 18px;background:var(--bg3);border-bottom:1px solid var(--border);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent)">PCI DSS v4.0</div>
+<div id="pci-table"></div></div>
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+<div style="padding:14px 18px;background:var(--bg3);border-bottom:1px solid var(--border);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent)">SWIFT CSP v2024</div>
+<div id="swift-table"></div></div>
+</div></div>
+<div class="page" id="page-history"><div id="hist-list"><div class="empty"><div class="empty-icon">🕐</div>No history yet.</div></div></div>
+</div>
+<div class="modal-bg" id="modal"><div class="modal">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+<div style="font-size:16px;font-weight:700;color:var(--accent)" id="modal-title">Finding</div>
+<span style="cursor:pointer;color:var(--text2);font-size:20px" onclick="closeModal()">X</span>
+</div><div id="modal-body"></div>
+</div></div>
+<div class="toast" id="toast"></div>
+<script>
+const MODS=[{k:'recon',l:'Recon',i:'🔎'},{k:'portscan',l:'Ports',i:'🔌'},{k:'webscan',l:'Web',i:'🌐'},{k:'apisec',l:'API',i:'⚡'},{k:'auth',l:'Auth',i:'🔐'},{k:'ssl',l:'SSL',i:'🔒'},{k:'bizlogic',l:'BizLogic',i:'💰'},{k:'ad',l:'AD/LDAP',i:'🏢'},{k:'pci',l:'PCI/SWIFT',i:'📋'},{k:'network',l:'Network',i:'🌍'}];
+let token=null,findings=[],history=[],activeF='all',eMods=new Set(MODS.map(m=>m.k));
+window.onload=()=>{buildMods();token=sessionStorage.getItem('gt');if(token)showApp()};
+async function login(){
+const u=document.getElementById('lu').value,p=document.getElementById('lp').value;
+document.getElementById('lerr').style.display='none';
+try{const fd=new URLSearchParams();fd.append("username",u);fd.append("password",p);
+const r=await fetch('/api/v1/auth/token',{method:'POST',body:fd});
+if(r.ok){const d=await r.json();token=d.access_token;sessionStorage.setItem('gt',token);document.getElementById('uname').textContent=u;document.getElementById('avi').textContent=u[0].toUpperCase();showApp()}
+else document.getElementById('lerr').style.display='block';}
+catch{token='demo';sessionStorage.setItem('gt','demo');showApp();}}
+function showApp(){document.getElementById('loginPage').style.display='none';pingApi();loadHistory();}
+function logout(){token=null;sessionStorage.removeItem('gt');document.getElementById('loginPage').style.display='flex';}
+async function pingApi(){try{const r=await fetch('/api/health',{headers:ah()});document.getElementById('apiStatus').innerHTML=r.ok?'<span style="color:var(--accent3)">● Online</span>':'<span style="color:var(--high)">● Error</span>';}catch{document.getElementById('apiStatus').innerHTML='<span style="color:var(--accent3)">● Demo</span>';}}
+function ah(){return token&&token!=='demo'?{'Authorization':'Bearer '+token,'Content-Type':'application/json'}:{'Content-Type':'application/json'};}
+function nav(p,el){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));document.getElementById('page-'+p).classList.add('active');if(el)el.classList.add('active');const t={dashboard:'DASHBOARD',scan:'NEW SCAN',findings:'FINDINGS',compliance:'COMPLIANCE',history:'HISTORY'}[p]||p.toUpperCase();document.getElementById('ptitle').innerHTML='<span>'+t.slice(0,4)+'</span>'+t.slice(4);}
+function buildMods(){document.getElementById('mods').innerHTML=MODS.map(m=>`<div class="mod on" id="m-${m.k}" onclick="togMod('${m.k}')"><span class="mod-icon">${m.i}</span>${m.l}</div>`).join('');updMC();}
+function togMod(k){eMods.has(k)?eMods.delete(k):eMods.add(k);document.getElementById('m-'+k).className='mod'+(eMods.has(k)?' on':'');updMC();}
+function toggleAll(){if(eMods.size===MODS.length){eMods.clear();document.querySelectorAll('.mod').forEach(el=>el.classList.remove('on'));}else{MODS.forEach(m=>eMods.add(m.k));document.querySelectorAll('.mod').forEach(el=>el.classList.add('on'));}updMC();}
+function updMC(){document.getElementById('mc').textContent=eMods.size+'/'+MODS.length+' selected';}
+function quickScan(){const t=document.getElementById('qt').value.trim();if(!t){toast('Enter target');return;}document.getElementById('st').value=t;document.getElementById('sp').value=document.getElementById('qtype').value;nav('scan',document.querySelector('.nav-item:nth-child(2)'));document.querySelector('.nav-item:nth-child(1)').classList.remove('active');setTimeout(startScan,100);}
+async function startScan(){const t=document.getElementById('st').value.trim();if(!t){toast('Enter target');return;}document.getElementById('startBtn').disabled=true;document.getElementById('scan-progress').style.display='block';document.getElementById('dash-progress').style.display='block';const payload={target:t,scan_type:document.getElementById('sp').value,modules:[...eMods],options:{threads:parseInt(document.getElementById('sth').value),auth_header:document.getElementById('sat').value||null}};try{if(token!=='demo'){const r=await fetch('/api/v1/scans/',{method:'POST',headers:ah(),body:JSON.stringify(payload)});if(!r.ok)throw 0;const d=await r.json();listenSSE(d.id);}else demoScan(t,payload.scan_type);}catch{demoScan(t,payload.scan_type);}toast('Scan started: '+t);}
+function listenSSE(id){const es=new EventSource('/api/v1/scans/'+id+'/events');es.onmessage=e=>{const d=JSON.parse(e.data);updProg(d.progress||0,d.module||'');if(d.type==='log')addLog(d);if(d.type==='finding')addFinding(d.finding);if(d.type==='complete'){es.close();document.getElementById('startBtn').disabled=false;toast('Done!');loadHistory();}};es.onerror=()=>es.close();}
+function updProg(pct,mod){['db','sb'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.width=pct+'%';});document.getElementById('dp').textContent=pct+'%';document.getElementById('sp2').textContent=pct+'%';if(mod){document.getElementById('dm').textContent=mod;document.getElementById('sm').textContent=mod;}}
+function addLog(d){['dl','sl'].forEach(id=>{const el=document.getElementById(id);if(!el)return;const cls={ok:'log-ok',warn:'log-warn',error:'log-error',info:'log-info',data:'log-data'}[d.level]||'log-info';const ln=document.createElement('div');ln.className=cls;ln.textContent='['+new Date().toLocaleTimeString()+'] '+d.message;el.appendChild(ln);el.scrollTop=el.scrollHeight;});}
+function addFinding(f){if(!f)return;findings.push(f);renderFindings();updStats();}
+function stopScan(){document.getElementById('startBtn').disabled=false;document.getElementById('scan-progress').style.display='none';toast('Stopped');}
+function demoScan(target,type){
+const logs=[{l:'info',m:'Starting '+type+' on '+target},{l:'data',m:'[Recon] DNS enum...'},{l:'ok',m:'[Recon] 3 subdomains found'},{l:'data',m:'[Ports] Scanning...'},{l:'ok',m:'[Ports] Open: 80,443,8080'},{l:'warn',m:'[Web] SQL injection test...'},{l:'error',m:'[Web] SQLi found at /api/login!'},{l:'data',m:'[API] JWT test...'},{l:'error',m:'[API] JWT alg:none bypass!'},{l:'error',m:'[Auth] Default creds admin/admin!'},{l:'warn',m:'[SSL] TLS 1.0 enabled (PCI FAIL)'},{l:'ok',m:'Scan complete!'}];
+const demo=[{severity:'critical',cvss:9.8,title:'SQL Injection — /api/login',host:target,category:'web',owasp_category:'A03:2021-Injection',pci_dss_req:['6.2.4'],description:'SQL injection allows authentication bypass and data extraction.',evidence:"username=' OR 1=1-- → HTTP 200",recommendation:'Use parameterized queries.'},{severity:'critical',cvss:9.8,title:'JWT alg:none bypass',host:target,category:'api',owasp_category:'API2:2023-Broken Auth',pci_dss_req:['8.4.2'],swift_control:['5.2'],description:'JWT accepts alg:none allowing token forgery.',evidence:'alg:none accepted without signature.',recommendation:'Enforce RS256/ES256 only.'},{severity:'critical',cvss:9.8,title:'Default credentials — admin/admin',host:target,category:'auth',owasp_category:'A07:2021-Auth Failures',pci_dss_req:['2.2.1'],description:'Default credentials grant full admin access.',evidence:'admin/admin → 200 OK + token',recommendation:'Change all default passwords immediately.'},{severity:'high',cvss:7.5,title:'TLS 1.0 enabled',host:target,category:'ssl',owasp_category:'A02:2021-Crypto Failures',pci_dss_req:['4.2.1'],swift_control:['2.5A'],description:'TLS 1.0 violates PCI DSS 4.2.1.',evidence:'openssl s_client -tls1 → success',recommendation:'Disable TLS 1.0 and 1.1.'},{severity:'high',cvss:8.1,title:'CSRF on /api/transfers',host:target,category:'web',pci_dss_req:['6.2.4'],description:'Transfer endpoint vulnerable to CSRF.',evidence:'Cross-origin POST accepted.',recommendation:'Implement CSRF tokens.'},{severity:'medium',cvss:5.3,title:'Missing HSTS header',host:target,category:'ssl',pci_dss_req:['4.2.1'],description:'No Strict-Transport-Security header.',recommendation:'Add HSTS max-age=31536000.'},{severity:'medium',cvss:5.3,title:'Server version disclosed',host:target,category:'web',pci_dss_req:['2.2.4'],description:'Server: nginx/1.18.0 leaks version.',recommendation:'Set server_tokens off.'},{severity:'low',cvss:3.1,title:'Missing X-Content-Type-Options',host:target,category:'web',description:'MIME sniffing possible.',recommendation:'Add X-Content-Type-Options: nosniff'}];
+let i=0;const iv=setInterval(()=>{if(i<logs.length){addLog({level:logs[i].l,message:logs[i].m});const p=Math.round((i+1)/logs.length*100);updProg(p,logs[i].m);if(i<demo.length)addFinding(demo[i]);i++;}else{clearInterval(iv);document.getElementById('startBtn').disabled=false;toast('Demo scan complete! '+demo.length+' findings');history.unshift({id:'d'+Date.now(),target,scan_type:type,created_at:new Date().toISOString(),findings:demo});renderHistory();loadComplianceDemo();updStats();}},600);}
+function renderFindings(f){f=f||activeF;const list=f==='all'?findings:findings.filter(x=>x.severity===f);document.getElementById('fc').textContent=list.length+' findings';const tb=document.getElementById('ftable');if(!list.length){tb.innerHTML='<tr><td colspan="6"><div class="empty"><div class="empty-icon">🔍</div>No findings.</div></td></tr>';return;}tb.innerHTML=list.map(x=>`<tr><td><span class="badge sev-${x.severity}">${x.severity}</span></td><td><b style="color:${cc(x.cvss)}">${x.cvss||'—'}</b></td><td>${x.title||''}</td><td style="color:var(--text2);font-size:12px">${x.host||''}</td><td style="color:var(--text2);font-size:12px">${x.category||''}</td><td><button class="btn btn-sm" style="background:var(--bg3);border:1px solid var(--border);color:var(--accent)" onclick="showF(${findings.indexOf(x)})">Details</button></td></tr>`).join('');const de=document.getElementById('dash-findings');if(de&&findings.length)de.innerHTML='<table><thead><tr><th>Severity</th><th>CVSS</th><th>Title</th></tr></thead><tbody>'+findings.slice(0,5).map(x=>`<tr><td><span class="badge sev-${x.severity}">${x.severity}</span></td><td><b style="color:${cc(x.cvss)}">${x.cvss||'—'}</b></td><td>${x.title||''}</td></tr>`).join('')+'</tbody></table>';}
+function filt(f,btn){activeF=f;document.querySelectorAll('#filters button').forEach(b=>{b.style.color='var(--text2)';b.style.borderColor='var(--border)';});btn.style.color='var(--accent)';btn.style.borderColor='var(--accent)';renderFindings(f);}
+function showF(i){const f=findings[i];if(!f)return;document.getElementById('modal-title').innerHTML='<span class="badge sev-'+f.severity+'" style="margin-right:8px">'+f.severity+'</span>'+f.title;const rows=[['CVSS','<b style="color:'+cc(f.cvss)+';font-size:20px">'+(f.cvss||'N/A')+'</b>'],['OWASP',f.owasp_category||''],['PCI DSS',(f.pci_dss_req||[]).join(', ')],['SWIFT',(f.swift_control||[]).join(', ')],['Description',f.description||''],['Evidence',f.evidence?'<div class="code-block">'+f.evidence+'</div>':''],['Fix',f.recommendation||'']].filter(r=>r[1]);document.getElementById('modal-body').innerHTML=rows.map(([l,v])=>'<div class="detail-row"><div class="detail-lbl">'+l+'</div><div class="detail-val">'+v+'</div></div>').join('');document.getElementById('modal').classList.add('open');}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+function updStats(){const c={critical:0,high:0,medium:0};findings.forEach(f=>{if(c[f.severity]!==undefined)c[f.severity]++;});document.getElementById('s-critical').textContent=c.critical;document.getElementById('s-high').textContent=c.high;document.getElementById('s-medium').textContent=c.medium;document.getElementById('s-scans').textContent=history.length;}
+async function loadHistory(){if(token==='demo')return;try{const r=await fetch('/api/v1/scans/?limit=20',{headers:ah()});if(r.ok){const d=await r.json();history=d.items||d||[];renderHistory();}}catch{}}
+function renderHistory(){const el=document.getElementById('hist-list');if(!history.length){el.innerHTML='<div class="empty"><div class="empty-icon">🕐</div>No history.</div>';return;}el.innerHTML=history.map(s=>{const f=s.findings||[];const c={critical:0,high:0,medium:0};f.forEach(x=>{if(c[x.severity]!==undefined)c[x.severity]++;});return'<div class="hist-item"><div style="flex:1"><div style="font-size:15px;font-weight:700">'+s.target+'</div><div style="font-size:11px;color:var(--text2)">'+new Date(s.created_at).toLocaleString()+' · '+(s.scan_type||'full')+'</div></div><div style="display:flex;gap:6px">'+(c.critical?'<span class="badge sev-critical">'+c.critical+'C</span>':'')+(c.high?'<span class="badge sev-high">'+c.high+'H</span>':'')+(c.medium?'<span class="badge sev-medium">'+c.medium+'M</span>':'')+'</div><div style="color:var(--text2);font-size:12px">'+f.length+' findings</div></div>';}).join('');}
+function loadComplianceDemo(){const pci=[['1.2.5','Required ports only','fail'],['2.2.1','Default passwords changed','fail'],['2.2.4','Version not disclosed','fail'],['4.2.1','Strong crypto in transit','fail'],['6.2.4','No injection vulns','fail'],['8.4.2','MFA for CDE access','fail'],['1.3.1','DB ports not exposed','pass'],['10.2.1','Audit logs protected','pass'],['11.3.1','Vuln scan performed','pass'],['3.3.1','SAD not retained','manual'],['8.3.6','Password complexity','manual']];const swift=[['2.2','Security updates applied','fail'],['2.5A','TLS 1.2+ enforced','fail'],['2.6','HSTS configured','fail'],['4.1','Password policy','fail'],['5.1','Logical access control','fail'],['5.2','Token management','fail'],['5.4','MFA for operators','fail'],['1.1','SWIFT env isolated','manual'],['2.7','Vuln scanning','pass'],['6.3','Pentest performed','pass'],['7.1','Vuln management','pass'],['7.2','Annual assessment','pass']];document.getElementById('pci-table').innerHTML=pci.map(c=>'<div class="comp-row"><span class="comp-req">'+c[0]+'</span><span class="comp-title">'+c[1]+'</span><span class="comp-status status-'+c[2]+'">'+c[2].toUpperCase()+'</span></div>').join('');document.getElementById('swift-table').innerHTML=swift.map(c=>'<div class="comp-row"><span class="comp-req">'+c[0]+'</span><span class="comp-title">'+c[1]+'</span><span class="comp-status status-'+c[2]+'">'+c[2].toUpperCase()+'</span></div>').join('');}
+function cc(v){if(!v)return'var(--text2)';if(v>=9)return'var(--critical)';if(v>=7)return'var(--high)';if(v>=4)return'var(--medium)';return'var(--low)';}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+</script></body></html>

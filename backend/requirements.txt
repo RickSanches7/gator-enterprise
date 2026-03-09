@@ -21,7 +21,7 @@ psycopg2-binary==2.9.9
 alembic==1.13.1
 
 # ─── HTTP & Networking ───────────────────────
-httpx[http2]==0.26.0
+httpx[http2]
 aiohttp==3.9.1
 requests==2.31.0
 websockets==12.0
@@ -29,16 +29,16 @@ websockets==12.0
 # ─── Security & Crypto ───────────────────────
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
-cryptography==42.0.0
+cryptography
 python-multipart==0.0.6
 pyjwt==2.8.0
 
 # ─── Pentest Libraries ───────────────────────
 python-nmap==0.7.1           # nmap wrapper
-impacket==0.11.0             # AD attacks
+impacket             # AD attacks
 dnspython==2.4.2             # DNS queries
-pyOpenSSL==24.0.0            # SSL/TLS analysis
-sslyze==5.2.0                # SSL deep scan
+pyOpenSSL            # SSL/TLS analysis
+#sslyze                # SSL deep scan
 
 # ─── Data Processing ─────────────────────────
 pydantic==2.5.3
@@ -52,7 +52,7 @@ Pillow==10.2.0               # Images in reports
 jinja2==3.1.3                # Report templates
 
 # ─── Telegram Bot ────────────────────────────
-python-telegram-bot==20.7
+python-telegram-bot
 
 # ─── CVE & Vulnerability Data ────────────────
 nvdlib==0.7.6                # NVD CVE API

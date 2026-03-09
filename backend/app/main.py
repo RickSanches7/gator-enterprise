@@ -38,7 +38,7 @@ async def lifespan(app: FastAPI):
 
     # Create DB tables
     async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+        await conn.run_sync(lambda conn: Base.metadata.create_all(conn, checkfirst=True))
     logger.success("Database tables initialized")
 
     # Check tools availability
@@ -90,14 +90,14 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 # ─── API Routers ─────────────────────────────────────────────
 API_PREFIX = "/api/v1"
 
-app.include_router(router_auth.router,        prefix=API_PREFIX, tags=["Auth"])
-app.include_router(router_scans.router,       prefix=API_PREFIX, tags=["Scans"])
-app.include_router(router_findings.router,    prefix=API_PREFIX, tags=["Findings"])
-app.include_router(router_engagements.router, prefix=API_PREFIX, tags=["Engagements"])
-app.include_router(router_reports.router,     prefix=API_PREFIX, tags=["Reports"])
-app.include_router(router_dashboard.router,   prefix=API_PREFIX, tags=["Dashboard"])
-app.include_router(router_tools.router,       prefix=API_PREFIX, tags=["Tools"])
-app.include_router(router_ws.router,          prefix="/ws",       tags=["WebSocket"])
+app.include_router(router_auth,        prefix=API_PREFIX, tags=["Auth"])
+app.include_router(router_scans,       prefix=API_PREFIX, tags=["Scans"])
+app.include_router(router_findings,    prefix=API_PREFIX, tags=["Findings"])
+app.include_router(router_engagements, prefix=API_PREFIX, tags=["Engagements"])
+app.include_router(router_reports,     prefix=API_PREFIX, tags=["Reports"])
+app.include_router(router_dashboard,   prefix=API_PREFIX, tags=["Dashboard"])
+app.include_router(router_tools,       prefix=API_PREFIX, tags=["Tools"])
+app.include_router(router_ws,          prefix="/ws",       tags=["WebSocket"])
 
 
 # ─── Health & Status ─────────────────────────────────────────

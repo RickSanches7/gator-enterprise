@@ -195,7 +195,6 @@ class Finding(Base):
 
     __table_args__ = (
         Index("ix_findings_scan_id", "scan_id"),
-        Index("ix_findings_severity", "severity"),
         Index("ix_findings_cvss", "cvss_score"),
     )
 
