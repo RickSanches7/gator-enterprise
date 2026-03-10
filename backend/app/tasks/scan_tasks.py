@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from celery import shared_task
 from sqlalchemy.orm import Session
 
-from app.core.database import AsyncSessionLocal as SessionLocal
+from app.core.database import SyncSessionLocal as SessionLocal
 from app.models.models import Scan, ScanStatus
 from app.models.models import ScanEvent
 from app.models.models import Finding
@@ -198,7 +198,7 @@ def run_full_scan(self, scan_id: str):
         scan=db.query(Scan).filter(Scan.id==scan_id).first()
         ended=datetime.now(timezone.utc)
         dur=int((ended-scan.started_at).total_seconds()) if scan and scan.started_at else 0
-        _upd(db,scan_id, status=ScanStatus.COMPLETED, finished_at=ended, progress=100,
+        _upd(db,scan_id, status=ScanStatus.FINISHED, finished_at=ended, progress=100,
              findings_count=len(all_findings), critical_count=sev["critical"],
              high_count=sev["high"], medium_count=sev["medium"],
              low_count=sev["low"], raw_results=all_results)
@@ -251,3 +251,7 @@ def daily_digest():
             lines.append(f"{icon} {s.target} C:{s.critical_count or 0} H:{s.high_count or 0}")
         bot.send("\n".join(lines))
     finally: db.close()
+
+# Aliases for router compatibility
+run_recon = run_full_scan
+run_portscan = run_full_scan

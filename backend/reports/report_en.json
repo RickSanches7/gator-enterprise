@@ -1,0 +1,239 @@
+{
+  "report_metadata": {
+    "title": "PENETRATION TEST REPORT",
+    "client": "Client",
+    "target": "scanme.nmap.org",
+    "date": "2026-03-10",
+    "language": "en",
+    "generated_by": "GATOR PRO Enterprise v2.0",
+    "generated_at": "2026-03-10T17:15:34.048673+00:00"
+  },
+  "executive_summary": {
+    "total_findings": 3,
+    "severity_counts": {
+      "critical": 0,
+      "high": 1,
+      "medium": 2,
+      "low": 0,
+      "info": 0
+    },
+    "risk_score": "MEDIUM",
+    "pci_dss_fail": 0,
+    "swift_fail": 0,
+    "top_findings": [
+      {
+        "title": "Outdated OpenSSH 6.6",
+        "cvss": 7.5,
+        "severity": "high",
+        "host": "scanme.nmap.org"
+      },
+      {
+        "title": "[PCI DSS 1.4.1] WAF deployed for public-facing apps",
+        "cvss": 5.3,
+        "severity": "medium",
+        "host": "scanme.nmap.org"
+      },
+      {
+        "title": "[PCI DSS 6.4.2] Automated solution for public-facing web apps",
+        "cvss": 5.3,
+        "severity": "medium",
+        "host": "scanme.nmap.org"
+      }
+    ]
+  },
+  "scope": {
+    "targets": [
+      "scanme.nmap.org"
+    ],
+    "scan_type": "full",
+    "started_at": "",
+    "finished_at": ""
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "cvss": 7.5,
+      "owasp_category": "A06:2021-Vulnerable and Outdated Components",
+      "title": "Outdated OpenSSH 6.6",
+      "description": "OpenSSH 6.6 has known vulnerabilities. Recommend 8.x+",
+      "recommendation": "Update OpenSSH to latest version.",
+      "evidence": "SSH banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13",
+      "host": "scanme.nmap.org",
+      "url": "ssh://scanme.nmap.org:22",
+      "tool": "gator_network",
+      "category": "network"
+    },
+    {
+      "severity": "medium",
+      "cvss": 5.3,
+      "owasp_category": "A05:2021-Security Misconfiguration",
+      "pci_dss_req": [
+        "1.4.1"
+      ],
+      "swift_control": [],
+      "title": "[PCI DSS 1.4.1] WAF deployed for public-facing apps",
+      "description": "WAF NOT detected",
+      "recommendation": "Deploy WAF (Cloudflare, ModSecurity, AWS WAF).",
+      "evidence": "WAF NOT detected",
+      "host": "scanme.nmap.org",
+      "url": "https://scanme.nmap.org",
+      "tool": "gator_pci",
+      "category": "compliance"
+    },
+    {
+      "severity": "medium",
+      "cvss": 5.3,
+      "owasp_category": "A06:2021-Vulnerable and Outdated Components",
+      "pci_dss_req": [
+        "6.4.2"
+      ],
+      "swift_control": [],
+      "title": "[PCI DSS 6.4.2] Automated solution for public-facing web apps",
+      "description": "WAF: not detected",
+      "recommendation": "Deploy WAF. Configure custom rules for banking-specific patterns.",
+      "evidence": "WAF: not detected",
+      "host": "scanme.nmap.org",
+      "url": "https://scanme.nmap.org",
+      "tool": "gator_pci",
+      "category": "compliance"
+    }
+  ],
+  "pci_results": {},
+  "swift_results": {},
+  "recon_data": {
+    "target": "scanme.nmap.org",
+    "ip_addresses": [
+      "45.33.32.156"
+    ],
+    "dns": {
+      "A": [
+        "45.33.32.156"
+      ],
+      "PTR": [
+        "45.33.32.156 → scanme.nmap.org"
+      ],
+      "AAAA": [
+        "2600:3c01::f03c:91ff:fe18:bb2f"
+      ],
+      "MX": [
+        "Server:\t\t127.0.0.11",
+        "Address:\t127.0.0.11#53",
+        "Non-authoritative answer:",
+        "*** Can't find scanme.nmap.org: No answer",
+        "Authoritative answers can be found from:",
+        "nmap.org",
+        "origin = ns1.linode.com",
+        "mail addr = hostmaster.nmap.com",
+        "serial = 2021000017",
+        "refresh = 14400"
+      ],
+      "NS": [
+        "Server:\t\t127.0.0.11",
+        "Address:\t127.0.0.11#53",
+        "Non-authoritative answer:",
+        "*** Can't find scanme.nmap.org: No answer",
+        "Authoritative answers can be found from:",
+        "nmap.org",
+        "origin = ns1.linode.com",
+        "mail addr = hostmaster.nmap.com",
+        "serial = 2021000017",
+        "refresh = 14400"
+      ],
+      "TXT": [
+        "Server:\t\t127.0.0.11",
+        "Address:\t127.0.0.11#53",
+        "Non-authoritative answer:",
+        "*** Can't find scanme.nmap.org: No answer",
+        "Authoritative answers can be found from:",
+        "nmap.org",
+        "origin = ns1.linode.com",
+        "mail addr = hostmaster.nmap.com",
+        "serial = 2021000017",
+        "refresh = 14400"
+      ],
+      "CAA": [
+        "Server:\t\t127.0.0.11",
+        "Address:\t127.0.0.11#53",
+        "Non-authoritative answer:",
+        "*** Can't find scanme.nmap.org: No answer",
+        "Authoritative answers can be found from:",
+        "nmap.org",
+        "origin = ns1.linode.com",
+        "mail addr = hostmaster.nmap.com",
+        "serial = 2021000017",
+        "refresh = 14400"
+      ],
+      "SOA": [
+        "Server:\t\t127.0.0.11",
+        "Address:\t127.0.0.11#53",
+        "Non-authoritative answer:",
+        "*** Can't find scanme.nmap.org: No answer",
+        "Authoritative answers can be found from:",
+        "nmap.org",
+        "origin = ns1.linode.com",
+        "mail addr = hostmaster.nmap.com",
+        "serial = 2021000017",
+        "refresh = 14400"
+      ]
+    },
+    "whois": {
+      "raw": "Malformed request.\n>>> Last update of WHOIS database: 2026-03-10T17:06:22Z <<<\n\nTerms of Use: Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.  The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.\n",
+      "parsed": {}
+    },
+    "ssl_cert": {
+      "error": "[Errno 101] Network is unreachable"
+    },
+    "subdomains": [],
+    "crt_sh": [],
+    "http_info": {},
+    "sensitive_paths": [],
+    "technologies": [],
+    "email_security": {
+      "spf": null,
+      "dmarc": null,
+      "dkim": null
+    },
+    "zone_transfer": [],
+    "cloud_assets": [
+      {
+        "type": "S3",
+        "url": "https://scanme.s3.amazonaws.com",
+        "status": 403,
+        "public": false
+      },
+      {
+        "type": "S3",
+        "url": "https://s3.amazonaws.com/scanme",
+        "status": 403,
+        "public": false
+      },
+      {
+        "type": "S3",
+        "url": "https://scanme-uploads.s3.amazonaws.com",
+        "status": 403,
+        "public": false
+      },
+      {
+        "type": "S3",
+        "url": "https://s3.amazonaws.com/scanme-uploads",
+        "status": 403,
+        "public": false
+      }
+    ],
+    "google_dorks": [
+      "site:scanme.nmap.org filetype:pdf \"confidential\" OR \"internal use only\"",
+      "site:scanme.nmap.org filetype:xls OR xlsx \"account\" OR \"password\" OR \"transfer\"",
+      "site:scanme.nmap.org inurl:admin OR inurl:login OR inurl:panel OR inurl:portal",
+      "site:scanme.nmap.org \"SQL syntax\" OR \"mysql_fetch\" OR \"ORA-\" OR \"JDBC\"",
+      "site:scanme.nmap.org \"phpinfo()\" OR \"PHP Version\" OR \"phpinfo\"",
+      "site:scanme.nmap.org ext:env OR ext:yml OR ext:config \"password\" OR \"secret\"",
+      "site:scanme.nmap.org inurl:api OR inurl:swagger OR inurl:graphql OR inurl:wsdl",
+      "site:scanme.nmap.org \"Index of /\" -\"403 Forbidden\"",
+      "site:scanme.nmap.org inurl:backup OR inurl:dump OR inurl:old OR inurl:bak",
+      "\"scanme.nmap.org\" \"Internal Server Error\" OR \"stack trace\" OR \"Exception in\"",
+      "\"scanme.nmap.org\" site:pastebin.com OR site:github.com \"password\" OR \"token\" OR \"secret\"",
+      "\"scanme.nmap.org\" site:shodan.io OR site:zoomeye.org OR site:fofa.info"
+    ]
+  },
+  "open_ports": []
+}

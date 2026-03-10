@@ -81,10 +81,10 @@ async def create_scan(request: ScanCreateRequest, db: AsyncSession = Depends(get
     }
 
     task_fn = task_map.get(request.scan_type, run_full_scan)
-    task = task_fn.delay(scan_id, target, request.options)
-
-    # Save celery task id
-    scan.celery_task_id = task.id
+    import threading
+    t = threading.Thread(target=task_fn, args=(scan_id,), daemon=True)
+    t.start()
+    scan.celery_task_id = str(id(t))
     await db.commit()
 
     logger.info("Scan started: {} → {} ({})", scan_id[:8], target, request.scan_type)

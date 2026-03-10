@@ -233,3 +233,372 @@
 2026-03-09 18:59:58 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
 2026-03-09 18:59:58 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
 2026-03-09 18:59:58 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 14:40:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 14:40:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 14:40:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 14:40:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 14:40:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 14:40:59 | SUCCESS | Database tables initialized
+2026-03-10 14:41:00 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 14:41:00 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 14:41:00 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:01:51 | ERROR | Unhandled exception: ImportError — cannot import name 'run_recon' from 'app.tasks.scan_tasks' (/app/app/tasks/scan_tasks.py)
+2026-03-10 15:03:21 | ERROR | Unhandled exception: ImportError — cannot import name 'run_recon' from 'app.tasks.scan_tasks' (/app/app/tasks/scan_tasks.py)
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:13 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:13 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:13 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:13 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:13 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:13 | SUCCESS | Database tables initialized
+2026-03-10 15:09:13 | SUCCESS | Database tables initialized
+2026-03-10 15:09:13 | SUCCESS | Database tables initialized
+2026-03-10 15:09:13 | SUCCESS | Database tables initialized
+2026-03-10 15:09:15 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:15 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:15 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:15 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:15 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:15 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:15 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:15 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:15 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:15 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:15 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:15 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:56 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:56 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:56 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:09:56 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:09:56 | SUCCESS | Database tables initialized
+2026-03-10 15:09:56 | SUCCESS | Database tables initialized
+2026-03-10 15:09:56 | SUCCESS | Database tables initialized
+2026-03-10 15:09:56 | SUCCESS | Database tables initialized
+2026-03-10 15:09:58 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:58 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:58 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:58 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:58 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:58 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:09:58 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:58 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:58 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:58 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:09:58 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:09:58 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:12:00 | ERROR | Unhandled exception: TypeError — run_full_scan() takes 2 positional arguments but 4 were given
+2026-03-10 15:12:31 | ERROR | Unhandled exception: TypeError — run_full_scan() takes 2 positional arguments but 4 were given
+2026-03-10 15:13:01 | ERROR | Unhandled exception: TypeError — run_full_scan() takes 2 positional arguments but 4 were given
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:14:31 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:14:31 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:14:31 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:14:31 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:14:31 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:14:31 | SUCCESS | Database tables initialized
+2026-03-10 15:14:31 | SUCCESS | Database tables initialized
+2026-03-10 15:14:31 | SUCCESS | Database tables initialized
+2026-03-10 15:14:31 | SUCCESS | Database tables initialized
+2026-03-10 15:14:33 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:14:33 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:14:33 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:14:33 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:14:33 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:14:33 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:14:33 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:14:33 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:14:33 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:14:33 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:14:33 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:14:33 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:15:59 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:16:11 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:19:56 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:21:01 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:21:59 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:25:41 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:29:25 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:29:25 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:29:25 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:29:25 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:29:25 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:29:25 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:29:25 | SUCCESS | Database tables initialized
+2026-03-10 15:29:25 | SUCCESS | Database tables initialized
+2026-03-10 15:29:25 | SUCCESS | Database tables initialized
+2026-03-10 15:29:25 | SUCCESS | Database tables initialized
+2026-03-10 15:29:27 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:29:27 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:29:27 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:29:27 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:29:27 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:29:27 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:29:27 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:29:27 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:29:27 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:29:27 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:29:27 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:29:27 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:31:02 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:31:12 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:31:27 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 15:46:06 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:06 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:46:06 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:46:06 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:46:07 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:46:07 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | SUCCESS | Database tables initialized
+2026-03-10 15:46:07 | SUCCESS | Database tables initialized
+2026-03-10 15:46:07 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:46:07 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:46:07 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 15:46:07 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 15:46:07 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 15:46:07 | SUCCESS | Database tables initialized
+2026-03-10 15:46:07 | SUCCESS | Database tables initialized
+2026-03-10 15:46:08 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:46:08 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:46:08 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:46:08 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:46:08 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:46:08 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:46:09 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:46:09 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:46:09 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 15:46:09 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 15:46:09 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 15:46:09 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:14:24 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 16:14:53 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:20:55 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:20:55 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:20:55 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:20:55 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:20:55 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:20:55 | SUCCESS | Database tables initialized
+2026-03-10 16:20:55 | SUCCESS | Database tables initialized
+2026-03-10 16:20:55 | SUCCESS | Database tables initialized
+2026-03-10 16:20:55 | SUCCESS | Database tables initialized
+2026-03-10 16:20:57 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:20:57 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:20:57 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:20:57 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:20:57 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:20:57 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:20:57 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:20:57 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:20:57 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:20:57 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:20:57 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:20:57 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:21:43 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 16:22:18 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:26:15 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:26:15 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:26:15 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:26:15 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:26:15 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:26:15 | SUCCESS | Database tables initialized
+2026-03-10 16:26:15 | SUCCESS | Database tables initialized
+2026-03-10 16:26:15 | SUCCESS | Database tables initialized
+2026-03-10 16:26:15 | SUCCESS | Database tables initialized
+2026-03-10 16:26:17 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:26:17 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:26:17 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:26:17 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:26:17 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:26:17 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:26:17 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:26:17 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:26:17 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:26:17 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:26:17 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:26:17 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:27:19 | ERROR | Unhandled exception: OperationalError — [Errno 111] Connection refused
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:34:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:34:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:34:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:34:58 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:34:58 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:34:58 | SUCCESS | Database tables initialized
+2026-03-10 16:34:58 | SUCCESS | Database tables initialized
+2026-03-10 16:34:58 | SUCCESS | Database tables initialized
+2026-03-10 16:34:58 | SUCCESS | Database tables initialized
+2026-03-10 16:35:00 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:35:00 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:35:00 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:35:00 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:35:00 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:35:00 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:35:00 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:35:00 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:35:00 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:35:00 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:35:00 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:35:00 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:36:16 | INFO | Scan started: 3c61d6ee → scanme.nmap.org (full)
+2026-03-10 16:37:50 | INFO | Scan started: 1f184c29 → scanme.nmap.org (full)
+2026-03-10 16:38:10 | INFO | Scan started: b167c81d → scanme.nmap.org (full)
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:43:09 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:43:09 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:43:09 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 16:43:09 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 16:43:09 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 16:43:09 | SUCCESS | Database tables initialized
+2026-03-10 16:43:09 | SUCCESS | Database tables initialized
+2026-03-10 16:43:09 | SUCCESS | Database tables initialized
+2026-03-10 16:43:09 | SUCCESS | Database tables initialized
+2026-03-10 16:43:11 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:43:11 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:43:11 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:43:11 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:43:11 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:43:11 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:43:11 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:43:11 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:43:11 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:43:11 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 16:43:11 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 16:43:11 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 16:44:01 | INFO | Scan started: ad6642d3 → scanme.nmap.org (full)
+2026-03-10 16:44:53 | INFO | Scan started: 9c0449c0 → scanme.nmap.org (full)
+2026-03-10 16:46:58 | INFO | Scan started: b8f1ecab → scanme.nmap.org (full)
+2026-03-10 16:47:07 | INFO | Scan started: 27e75f2f → scanme.nmap.org (full)
+2026-03-10 16:47:14 | INFO | Scan started: f524c551 → scanme.nmap.org (full)
+2026-03-10 17:06:48 | INFO | Scan started: 4417ed05 → scanme.nmap.org (full)
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 17:16:47 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 17:16:47 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 17:16:47 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 17:16:47 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | INFO |   GATOR PRO ENTERPRISE v2.0.0 starting...
+2026-03-10 17:16:47 | INFO |   gator.uz | Banking Pentest Platform
+2026-03-10 17:16:47 | INFO | ════════════════════════════════════════════════════════════
+2026-03-10 17:16:47 | SUCCESS | Database tables initialized
+2026-03-10 17:16:47 | SUCCESS | Database tables initialized
+2026-03-10 17:16:47 | SUCCESS | Database tables initialized
+2026-03-10 17:16:47 | SUCCESS | Database tables initialized
+2026-03-10 17:16:49 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 17:16:49 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 17:16:49 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 17:16:49 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 17:16:49 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 17:16:49 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 17:16:49 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 17:16:49 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 17:16:49 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 17:16:49 | INFO | Tools available: nmap, nuclei, nikto, sqlmap, gobuster, ffuf, subfinder, whois, dig, openssl, python_impacket, sslyze
+2026-03-10 17:16:49 | SUCCESS | GATOR PRO ready → http://0.0.0.0:8000
+2026-03-10 17:16:49 | INFO | ────────────────────────────────────────────────────────────
+2026-03-10 17:19:08 | INFO | Scan started: 4c7b832c → scanme.nmap.org (full)
